@@ -1,0 +1,68 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/globals.scss" as globals;
+
+.posts-page {
+  background: colors.$porcelain;
+
+  .paginated-table {
+    .paginated-table-row {
+      .post-id,
+      .post-author {
+        font: normal normal normal 13px/17px Sailec;
+        letter-spacing: 0px;
+        color: colors.$raven;
+      }
+
+      .post-title {
+        font: normal normal normal 13px/18px Sailec;
+        font-weight: 600;
+        letter-spacing: 0px;
+        color: colors.$smalt;
+      }
+    }
+  }
+
+  .mobile-post-list {
+    padding: 0;
+
+    @media (min-width: globals.$tablet-viewport) {
+      display: none;
+    }
+
+    .mobile-post-entry {
+      background: colors.$white;
+      padding: 20px;
+      display: flex;
+
+      .favorite-button-container {
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .left-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .favorite-button {
+          display: none;
+        }
+
+        .action {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          img {
+            height: 14px;
+          }
+        }
+      }
+
+      .post-view-button {
+        border-radius: 4px;
+      }
+    }
+  }
+}

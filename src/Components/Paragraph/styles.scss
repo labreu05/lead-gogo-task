@@ -1,0 +1,13 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/globals.scss" as globals;
+
+.paragraph {
+  font: normal normal normal 13px/23px Sailec;
+  letter-spacing: 0px;
+  color: colors.$storm;
+  opacity: 1;
+
+  @media (min-width: globals.$tablet-viewport) {
+    font: normal normal normal 14px/23px Sailec;
+  }
+}

@@ -1,0 +1,55 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/globals.scss" as globals;
+
+.post-summary {
+  .title {
+    font: normal normal normal 13px/18px Sailec;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: colors.$smalt;
+    opacity: 1;
+
+    @media (min-width: globals.$tablet-viewport) {
+      font: normal normal normal 24px/32px Sailec;
+      letter-spacing: -0.48px;
+      color: colors.$carbon;
+      opacity: 1;
+    }
+  }
+
+  .subsection {
+    display: flex;
+    align-items: center;
+
+    .favorite-button {
+      margin-right: 10px;
+    }
+
+    .post-id,
+    .divider {
+      font: normal normal normal 12px/21px Sailec;
+      letter-spacing: 0px;
+      color: colors.$flint;
+      height: 14px;
+
+      @media (min-width: globals.$tablet-viewport) {
+        font: normal normal normal 14px/21px Sailec;
+      }
+    }
+
+    .divider {
+      margin: 0 5px;
+    }
+
+    .post-author {
+      font: normal normal normal 12px/21px Sailec;
+      letter-spacing: 0px;
+      color: colors.$raven;
+      height: 14px;
+
+      @media (min-width: globals.$tablet-viewport) {
+        font: normal normal normal 14px/21px Sailec;
+      }
+    }
+  }
+}

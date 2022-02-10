@@ -1,0 +1,77 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/globals.scss" as globals;
+
+.side-nav {
+  background: colors.$gogo 0% 0% no-repeat padding-box;
+  width: 242px;
+  z-index: 100;
+
+  .logo-container {
+    height: globals.$nav-height-sm;
+    display: flex;
+
+    @media (min-width: globals.$tablet-viewport) {
+      height: globals.$nav-height-md;
+    }
+
+    img {
+      margin: 16px 24px;
+
+      @media (min-width: globals.$tablet-viewport) {
+        margin: 28px 0 24px 23px;
+      }
+    }
+  }
+
+  .menu {
+    background-color: transparent;
+    border-right: none;
+    color: colors.$white;
+
+    .menu-item {
+      margin: 0;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      padding: 14px 24px;
+
+      &:hover {
+        color: colors.$white;
+      }
+
+      .menu-icon {
+        display: flex;
+        align-items: center;
+        height: 26px;
+        margin-top: -4px;
+        opacity: 0.5;
+      }
+
+      a {
+        color: colors.$white;
+        opacity: 0.5;
+        font: normal normal normal 14px/19px Sailec;
+        letter-spacing: 0px;
+      }
+    }
+
+    .ant-menu-item-selected {
+      background: colors.$apariencia 0% 0% no-repeat padding-box;
+
+      a {
+        font: normal normal normal 14px/20px Sailec;
+        font-weight: 600;
+        opacity: 1;
+      }
+
+      .menu-icon {
+        opacity: 1;
+        color: colors.$white;
+      }
+
+      a::before {
+        border-left: 3px solid colors.$monk;
+      }
+    }
+  }
+}

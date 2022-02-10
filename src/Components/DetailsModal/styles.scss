@@ -1,0 +1,96 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/globals.scss" as globals;
+
+.details-modal {
+  margin: 0;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding-bottom: 0;
+  border-top: 6px solid colors.$gogo;
+  background: colors.$gogo;
+  min-height: 100vh;
+
+  @media (min-width: globals.$tablet-viewport) {
+    max-width: 830px;
+    border-top: none;
+    position: relative;
+    top: 150px;
+    height: max-content;
+    margin: 0 auto;
+    background: transparent;
+    padding-bottom: 20px;
+  }
+
+  .ant-modal-content {
+    border-radius: 6px 6px 0px 0px;
+    height: 100%;
+
+    @media (min-width: globals.$tablet-viewport) {
+      border-radius: 6px;
+    }
+  }
+
+  .ant-modal-close {
+    top: 26px;
+    right: 20px;
+
+    .ant-modal-close-x {
+      line-height: 0;
+      position: relative;
+      width: 18px;
+      height: 18px;
+
+      .close-modal-icon {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .modal-body {
+    @media (min-width: globals.$tablet-viewport) {
+      margin: 20px;
+      display: block;
+      border-radius: 6px;
+      background: colors.$white;
+    }
+
+    .main-section {
+      padding: 20px;
+    }
+
+    .divider {
+      display: block;
+      margin: 10px 0;
+      border-bottom: 1px solid colors.$koala;
+    }
+
+    .sub-section {
+      padding: 20px;
+    }
+  }
+
+  .header {
+    background: colors.$porcelain 0% 0% no-repeat padding-box;
+    padding: 20px 45px 20px 20px;
+    border-radius: 6px 6px 0px 0px;
+    min-height: 60px;
+
+    @media (min-width: globals.$tablet-viewport) {
+      background: colors.$white;
+    }
+  }
+
+  .ant-modal-body {
+    padding: 0;
+
+    @media (min-width: globals.$tablet-viewport) {
+      background: colors.$porcelain;
+      overflow: auto;
+      border-radius: 6px;
+    }
+  }
+}

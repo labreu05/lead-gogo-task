@@ -1,0 +1,28 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/globals.scss" as globals;
+
+.main-layout {
+  height: 100%;
+  font-family: "Sailec";
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.4;
+    z-index: 99;
+    background: colors.$smalt;
+  }
+
+  .content-container {
+    background: colors.$porcelain;
+    overflow: scroll;
+  }
+
+  @media (min-width: globals.$tablet-viewport) {
+    .overlay {
+      display: none;
+    }
+  }
+}

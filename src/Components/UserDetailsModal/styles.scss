@@ -1,0 +1,10 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/globals.scss" as globals;
+
+.user-details-modal {
+  height: max-content;
+
+  @media (min-width: globals.$tablet-viewport) {
+    padding-bottom: 20px;
+  }
+}

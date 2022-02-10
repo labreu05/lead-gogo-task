@@ -1,0 +1,23 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/globals.scss" as globals;
+
+.ordered-list {
+  .list-header {
+    display: flex;
+    margin-bottom: 20px;
+
+    .title {
+      font: normal normal normal 14px/23px Sailec;
+      font-weight: 600;
+      letter-spacing: 0px;
+      color: colors.$carbon;
+      margin-right: 5px;
+    }
+
+    .count {
+      font: normal normal normal 14px/23px Sailec;
+      letter-spacing: 0px;
+      color: colors.$flint;
+    }
+  }
+}

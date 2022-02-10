@@ -1,0 +1,60 @@
+@use "../../styles/colors.scss" as colors;
+@use "../../styles/globals.scss" as globals;
+
+.page-header {
+  background: colors.$gogo;
+  color: colors.$white;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: globals.$nav-height-sm;
+
+  @media (min-width: globals.$tablet-viewport) {
+    height: globals.$nav-height-md;
+    background: colors.$white;
+    color: colors.$carbon;
+    padding: 26px 28px 22px 28px;
+  }
+
+  .left-container {
+    display: flex;
+    align-items: center;
+
+    .hamburger-title-container {
+      height: 100%;
+      display: flex;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+
+        @media (min-width: globals.$tablet-viewport) {
+          display: none;
+        }
+      }
+
+      .title {
+        font: normal normal normal 20px/32px "Sailec";
+        line-height: 24px;
+        letter-spacing: -0.4px;
+        text-transform: capitalize;
+
+        @media (min-width: globals.$tablet-viewport) {
+          font: normal normal normal 26px/32px Sailec;
+          letter-spacing: -0.52px;
+        }
+      }
+    }
+  }
+
+  .avatar-container {
+    display: none;
+
+    @media (min-width: globals.$tablet-viewport) {
+      display: block;
+    }
+  }
+}

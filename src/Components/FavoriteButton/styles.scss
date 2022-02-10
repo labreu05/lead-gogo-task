@@ -1,0 +1,13 @@
+.favorite-button {
+  cursor: pointer;
+
+  &.sm {
+    width: 18px;
+    height: 18px;
+  }
+
+  &.md {
+    width: 20px;
+    height: 20px;
+  }
+}
