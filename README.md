@@ -1,9 +1,13 @@
 # Steps to run the project
 
 1 - Move to project location.
+
 2 - Run `nvm use` to use the same node version that I used.
+
 3 - Run `npm install` to install project dependencies.
+
 4 - Run `npm start` to start the project at localhost.
+
 
 # Getting Started with Create React App
 
